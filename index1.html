@@ -24,7 +24,7 @@
         .animate-scroll:hover { animation-play-state: paused; }
 
         .pink-shadow { box-shadow: 0 15px 30px -5px rgba(244, 114, 182, 0.3); }
-        .card-hover { transition: all 0.3s ease; }
+        .card-hover { transition: all 0.3s ease; cursor: pointer; }
         .card-hover:hover { transform: translateY(-10px); }
 
         /* Style untuk efek gerak foto profil */
@@ -224,71 +224,231 @@
         </div>
     </section>
 
-    <!-- Projects Section (Original Style Restored) -->
+    <!-- Projects Section -->
     <section id="projects" class="py-24 px-6">
-        <div class="max-w-5xl mx-auto"> <!-- Ukuran diperkecil agar grid 2 kolom terlihat lebih pas -->
+        <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16 reveal">
                 <h2 class="text-4xl font-bold mb-4">🚀 Featured Projects</h2>
                 <p class="text-slate-500">Some of the works that I have done with all my heart.</p>
             </div>
             
-            <!-- Grid diubah menjadi 2 kolom (md:grid-cols-2) untuk 4 project -->
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Project 1 -->
-                <div class="reveal bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover">
+                <div class="reveal bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('Menejemen Tugas', 'Sistem Manajemen Tugas untuk mempermudah pengumpulan tugas murid.', 'data.png', 'https://github.com/nabilasalsabilan948-spec')">
                     <img src="data.png" class="w-full h-56 object-cover" alt="Project">
                     <div class="p-8">
                         <span class="text-xs font-bold text-rose-400 uppercase">Web App • Laravel</span>
                         <h3 class="text-xl font-bold mt-2 mb-3">Menejemen Tugas</h3>
                         <p class="text-slate-500 text-sm mb-4">Sistem Menejemen Tugas agar mmepermudah murid mengumpulkan tugas.</p>
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">PHP</span>
-                            <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">Tailwind</span>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">PHP</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">Tailwind</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
                         </div>
                     </div>
                 </div>
+
                 <!-- Project 2 -->
-                <div class="reveal delay-100 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover">
+                <div class="reveal delay-100 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('Web Drone', 'Website integrasi drone untuk deteksi ph, suhu, dan kejernihan air.', 'webDrone.png', 'https://github.com/nabilasalsabilan948-spec')">
                     <img src="webDrone.png" class="w-full h-56 object-cover" alt="Project">
                     <div class="p-8">
                         <span class="text-xs font-bold text-rose-400 uppercase">Web App • Laravel</span>
                         <h3 class="text-xl font-bold mt-2 mb-3">Web Drone</h3>
                         <p class="text-slate-500 text-sm mb-4">Website Drone untuk mendeteksi sensor ph,suhu dan kejernihan air.</p>
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">Laravel</span>
-                            <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">PHP</span>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">Laravel</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">PHP</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
                         </div>
                     </div>
                 </div>
+
                 <!-- Project 3 -->
-                <div class="reveal delay-200 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover">
+                <div class="reveal delay-200 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('PPDB Sekolah', 'Sistem Pendaftaran Peserta Didik Baru (PPDB) online yang efisien.', 'sekolah1.png', 'https://spmbmbuonline.web.id/')">
                     <img src="sekolah1.png" class="w-full h-56 object-cover" alt="Project">
                     <div class="p-8">
                         <span class="text-xs font-bold text-rose-400 uppercase">Backend • API</span>
                         <h3 class="text-xl font-bold mt-2 mb-3">PPDB Sekolah</h3>
                         <p class="text-slate-500 text-sm mb-4">Pendaftaran Sekolah Secara Online.</p>
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">Laravel</span>
-                            <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">MySQL</span>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">Laravel</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">MySQL</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
                         </div>
                     </div>
                 </div>
-                <!-- Project 4 (Ditambahkan agar genap 4 kolom dalam grid 2x2) -->
-                <div class="reveal delay-300 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover">
+
+                <!-- Project 4 -->
+                <div class="reveal delay-300 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('E-Commerce Web', 'Platform jual beli online dengan desain estetik dan responsif.', 'jualan.png', 'https://porto-bila.github.io/e-commerce/')">
                     <img src="jualan.png" class="w-full h-56 object-cover" alt="Project">
                     <div class="p-8">
                         <span class="text-xs font-bold text-rose-400 uppercase">Landing Page</span>
                         <h3 class="text-xl font-bold mt-2 mb-3">E-Commerce Web</h3>
                         <p class="text-slate-500 text-sm mb-4">Website promosi dengan tampilan produk yang estetik dan responsif.</p>
-                        <div class="flex gap-2">
-                            <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">HTML</span>
-                            <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">CSS/JS</span>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">HTML</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">CSS/JS</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
                         </div>
                     </div>
                 </div>
+
+                <!-- project 5 -->
+                <div class="reveal delay-300 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('Website Promosi Drone', 'Website Promosi Drone dengan tampilan yang estetik dan responsif.', 'webDrone (2).png', 'https://aquapink.bila.my.id/')">
+                    <img src="webDrone (2).png" class="w-full h-56 object-cover" alt="Project">
+                    <div class="p-8">
+                        <span class="text-xs font-bold text-rose-400 uppercase">Website Promosi Drone</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Website Promosi Drone</h3>
+                        <p class="text-slate-500 text-sm mb-4">Website Promosi Drone dengan tampilan yang estetik dan responsif.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">HTML</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">CSS/JS</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 6 -->
+                 <div class="reveal delay-300 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('Landing Page Parawisata', 'Website promosi dengan tampilan pemandangan yang indah,asri dan responsif.', 'parawisata.png', 'https://porto-bila.github.io/landingpage-parawisata/')">
+                    <img src="parawisata.png" class="w-full h-56 object-cover" alt="Project">
+                    <div class="p-8">
+                        <span class="text-xs font-bold text-rose-400 uppercase">Landing Page Parawisata</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Landing Page Parawisata</h3>
+                        <p class="text-slate-500 text-sm mb-4">Website promosi dengan tampilan pemandangan yang indah,asri dan responsif.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">HTML</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">CSS/JS</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 7 -->
+                 <div class="reveal delay-300 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('Website Absensi Melalui Wajah', 'Website Absensi Melalui Wajah dengan tampilan bagus dan responsif.', 'absen_wajah.png', 'https://github.com/porto-bila/absensi-wajah.git')">
+                    <img src="absen_wajah.png" class="w-full h-56 object-cover" alt="Project">
+                    <div class="p-8">
+                        <span class="text-xs font-bold text-rose-400 uppercase">Website Absensi Melalui Wajah</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Website Absensi Melalui Wajah</h3>
+                        <p class="text-slate-500 text-sm mb-4">Website Absensi Melalui Wajah dengan tampilan bagus dan responsif.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">HTML/CSS/JS</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">LARAVEL</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 8 -->
+                 <div class="reveal delay-300 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('Website Ucapan Anniversary', 'Website ucapan anniversary aesthetic dan responsif.', 'aniv.png', 'https://porto-bila.github.io/Anniversary/indexbaru.html')">
+                    <img src="aniv.png" class="w-full h-56 object-cover" alt="Project">
+                    <div class="p-8">
+                        <span class="text-xs font-bold text-rose-400 uppercase">Website Ucapan Anniversary</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Website Ucapan Anniversary</h3>
+                        <p class="text-slate-500 text-sm mb-4">Website ucapan anniversary aesthetic dan responsif.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">HTML</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">CSS/JS</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 9 -->
+                 <div class="reveal delay-300 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('Ucapan Ulang Tahun Pacar', 'Website ucapan ulang tahun untuk pacar elegan dan responsif.', 'hbdpacar.png', 'https://porto-bila.github.io/ulangtahun-pacar/ultahpacar.html')">
+                    <img src="hbdpacar.png" class="w-full h-56 object-cover" alt="Project">
+                    <div class="p-8">
+                        <span class="text-xs font-bold text-rose-400 uppercase">Ucapan Ulang Tahun Pacar</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Ucapan Ulang Tahun Pacar</h3>
+                        <p class="text-slate-500 text-sm mb-4">Website ucapan ulang tahun untuk pacar elegan dan responsif.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">HTML</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">CSS/JS</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 10 -->
+                 <div class="reveal delay-300 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('Landing Page Ulang Tahun Sahabat', 'Website ulang tahun dengan tampilan menarik,lucu dan responsif.', 'ultah_besti.png', 'https://porto-bila.github.io/ulangtahun-besti/hbdbestie.html')">
+                    <img src="ultah_besti.png" class="w-full h-56 object-cover" alt="Project">
+                    <div class="p-8">
+                        <span class="text-xs font-bold text-rose-400 uppercase">Landing Page Ulang Tahun Sahabat</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Landing Page ulang tahun sahabat</h3>
+                        <p class="text-slate-500 text-sm mb-4">Website ulang tahun dengan tampilan menarik,lucu dan responsif.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">HTML</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">CSS/JS</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- project 11 (NEW)
+                <div class="reveal delay-300 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('Sistem Kasir Pintar', 'Aplikasi kasir berbasis web untuk manajemen stok dan transaksi real-time.', 'kasir.png', 'https://github.com/nabilasalsabilan948-spec')">
+                    <div class="bg-slate-200 w-full h-56 flex items-center justify-center text-slate-400 italic">Project Preview</div>
+                    <div class="p-8">
+                        <span class="text-xs font-bold text-rose-400 uppercase">Web App • PHP Native</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Sistem Kasir Pintar</h3>
+                        <p class="text-slate-500 text-sm mb-4">Manajemen stok barang dan laporan penjualan otomatis.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">MySQL</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">Bootstrap</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- project 12 (NEW) -->
+                <!-- <div class="reveal delay-300 bg-white rounded-[2.5rem] overflow-hidden shadow-sm border border-rose-50 card-hover" onclick="openProject('Portfolio Fotografi', 'Landing page khusus fotografer dengan galeri foto yang smooth.', 'photography.png', 'https://github.com/nabilasalsabilan948-spec')">
+                    <div class="bg-slate-200 w-full h-56 flex items-center justify-center text-slate-400 italic">Project Preview</div>
+                    <div class="p-8">
+                        <span class="text-xs font-bold text-rose-400 uppercase">Landing Page • UI/UX</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Portfolio Fotografi</h3>
+                        <p class="text-slate-500 text-sm mb-4">Website showcase karya foto dengan desain minimalis.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex gap-2">
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">HTML</span>
+                                <span class="px-3 py-1 bg-rose-50 text-rose-500 text-[10px] rounded-full font-bold">AOS JS</span>
+                            </div>
+                            <span class="text-rose-500 text-xs font-bold">Kunjungi Live Project <i class="fas fa-external-link-alt ml-1"></i></span>
+                        </div>
+                    </div>
+                </div> --> -->
             </div>
 
-            <!-- More Link -->
+            <!-- HALAMAN BERIKUTNYA / PAGINATION LINK -->
+            <div class="mt-20 flex flex-col items-center reveal">
+                <div class="flex items-center gap-4 mb-6">
+                    <span class="w-12 h-[2px] bg-rose-200"></span>
+                    <p class="text-slate-400 font-bold uppercase tracking-[0.3em] text-[10px]">Halaman Berikutnya</p>
+                    <span class="w-12 h-[2px] bg-rose-200"></span>
+                </div>
+                <div class="flex gap-3">
+                    <a href="#projects" class="w-12 h-12 flex items-center justify-center rounded-2xl bg-rose-500 text-white font-bold shadow-lg">1</a>
+                    <a href="https://github.com/nabilasalsabilan948-spec?tab=repositories" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-2xl bg-white border border-rose-100 text-slate-400 font-bold hover:bg-rose-50 transition">2</a>
+                    <a href="https://github.com/nabilasalsabilan948-spec?tab=repositories" target="_blank" class="px-6 h-12 flex items-center justify-center rounded-2xl bg-white border border-rose-100 text-rose-500 font-bold hover:bg-rose-50 transition">
+                        Lihat Semua Web <i class="fas fa-chevron-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
             <div class="mt-16 text-center reveal">
                 <p class="text-slate-500 font-medium">
                     Mau lihat lebih banyak? 
@@ -299,6 +459,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="modal items-center justify-center p-6">
+        <div class="bg-white w-full max-w-5xl rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col relative max-h-[90vh]">
+            <button onclick="closeProject()" class="absolute top-5 right-5 w-10 h-10 bg-rose-500 text-white rounded-full z-10 hover:rotate-90 transition duration-300">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="overflow-y-auto">
+                <img id="pModalImg" src="" class="w-full h-auto object-contain bg-slate-100">
+                <div class="p-8 md:p-12 text-center md:text-left">
+                    <h3 id="pModalTitle" class="text-3xl font-bold text-slate-800 mb-4 font-cute"></h3>
+                    <p id="pModalDesc" class="text-slate-600 mb-8 leading-relaxed"></p>
+                    <a id="pModalLink" href="#" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-rose-500 text-white rounded-2xl font-bold hover:scale-105 transition pink-shadow">
+                        <i class="fas fa-external-link-alt"></i> Kunjungi Live Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Certificate Section -->
     <section id="certificates" class="py-24 px-6 bg-rose-50/50">
@@ -329,7 +509,6 @@
                     </div>
                 </div>
 
-                <!-- Sertifikat Lain... -->
                 <div class="reveal delay-75 cursor-pointer group" onclick="openCert('JS Essentials 1', 'Cisco Academy', 'Jan 2026', 'Mar 2029', '-', 'JavaScript_Essentials_1_certificate_nabila_page-0001.jpg')">
                     <div class="bg-white p-4 rounded-3xl shadow-sm border border-rose-100 text-center hover:scale-105 transition-all">
                         <div class="aspect-square bg-rose-100 rounded-2xl flex items-center justify-center mb-4 overflow-hidden">
@@ -373,17 +552,15 @@
         </div>
     </section>
 
-    <!-- Certificate Modal (Detail View) -->
+    <!-- Certificate Modal -->
     <div id="certModal" class="modal items-center justify-center p-6">
         <div class="bg-white w-full max-w-4xl rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col md:flex-row relative">
             <button onclick="closeCert()" class="absolute top-5 right-5 w-10 h-10 bg-rose-500 text-white rounded-full z-10 hover:rotate-90 transition duration-300">
                 <i class="fas fa-times"></i>
             </button>
-            
             <div class="md:w-1/2 bg-slate-100">
                 <img id="modalImg" src="" class="w-full h-full object-contain">
             </div>
-            
             <div class="md:w-1/2 p-10 flex flex-col justify-center">
                 <h3 id="modalTitle" class="text-2xl font-bold text-slate-800 mb-2"></h3>
                 <p id="modalIssuer" class="text-rose-500 font-bold mb-6"></p>
@@ -399,7 +576,6 @@
                         <span id="modalCode" class="font-bold text-slate-700"></span>
                     </div>
                 </div>
-
                 <div class="border-t border-rose-100 pt-6">
                     <div class="flex items-center gap-4">
                         <img src="mirror.jpeg" class="w-12 h-12 rounded-full border-2 border-rose-500 object-cover">
@@ -418,7 +594,6 @@
         <div class="max-w-3xl mx-auto bg-white rounded-[3rem] p-10 md:p-16 shadow-xl border border-rose-100 reveal">
             <h2 class="text-4xl font-bold mb-4 text-center">Let's Talk! 👋</h2>
             <p class="text-center text-slate-500 mb-12">Isi saran atau pesanmu di bawah ya!</p>
-            
             <form action="#" class="space-y-6">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
@@ -446,31 +621,23 @@
     </footer>
 
     <script>
-        // JS UNTUK EFEK GERAK FOTO (FOLLOW CURSOR)
         const tiltPhoto = document.getElementById('tilt-photo');
-        
         document.addEventListener('mousemove', (e) => {
-            if (window.innerWidth < 768) return; // Nonaktifkan di HP agar tidak pusing
-            
+            if (window.innerWidth < 768) return;
             const mouseX = e.clientX;
             const mouseY = e.clientY;
-            
             const rect = tiltPhoto.getBoundingClientRect();
             const photoX = rect.left + rect.width / 2;
             const photoY = rect.top + rect.height / 2;
-            
             const angleX = (photoY - mouseY) / 15;
             const angleY = (mouseX - photoX) / 15;
-            
             tiltPhoto.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
         });
 
-        // Kembalikan posisi foto saat mouse pergi
         document.addEventListener('mouseleave', () => {
             tiltPhoto.style.transform = `rotateX(0deg) rotateY(0deg)`;
         });
 
-        // Certificate Modal Logic
         function openCert(title, issuer, start, end, code, img) {
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalIssuer').innerText = "Diberikan oleh " + issuer;
@@ -486,7 +653,25 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Typing Effect
+        function openProject(title, desc, img, link) {
+            document.getElementById('pModalTitle').innerText = title;
+            document.getElementById('pModalDesc').innerText = desc;
+            document.getElementById('pModalImg').src = img;
+            document.getElementById('pModalLink').href = link;
+            if(link === '#') {
+                document.getElementById('pModalLink').style.display = 'none';
+            } else {
+                document.getElementById('pModalLink').style.display = 'inline-flex';
+            }
+            document.getElementById('projectModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProject() {
+            document.getElementById('projectModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
         const textElement = document.getElementById('typing-text');
         const phrases = ["Aesthetic & Fresh.", "Powerful & Secure.", "Responsive di HP."];
         let i = 0, j = 0, currentPhrase = [], isDeleting = false;
@@ -510,7 +695,6 @@
         }
         loop();
 
-        // Reveal logic
         window.addEventListener("scroll", function() {
             const reveals = document.querySelectorAll(".reveal");
             for (let i = 0; i < reveals.length; i++) {
